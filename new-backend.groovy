@@ -60,7 +60,7 @@ pipeline {
                 steps {
           
                     sh '''
-                     sed -i "s|mayurwagh/node-app:latest|${DOCKER_USER}/${DOCKER_REPO}:${BUILD_NUMBER}|g" k8s/deployment.yaml
+                     sed -i "s|ayushkamble820/flight-reservation-app:latest|${DOCKER_USER}/${DOCKER_REPO}:${BUILD_NUMBER}|g" k8s/deployment.yaml
                     '''
                     sh 'cat k8s/deployment.yaml'
                 }
