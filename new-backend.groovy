@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_REPO = "flight-backend"
-        DOCKER_USER  = "mayurwagh"
+        DOCKER_REPO = "flight-reservation-app"
+        DOCKER_USER  = "ayushkamble820"
         CLUSTER_NAME = "cbz-cluster"
         REGION = "eu-north-1"
 
@@ -11,7 +11,7 @@ pipeline {
         stage('Code-checkout'){
             steps{
                 git branch: 'main',
-                    url: 'https://github.com/mayurmwagh/flight-reservation-backend.git'
+                    url: 'https://github.com/ayushhkamble/flight-reservation-backend.git'
             }
         }
         stage('Code-build'){
